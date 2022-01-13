@@ -124,13 +124,15 @@ margin: 0px 17px 0px 0px;
 
 @media(max-width: 588px) {
     .header_menu {
-        margin: 0px 0px 0px 18%;
+        margin: 0px 0px 0px 20%;
+        
         
         }
         .menu_list {
             flex: 0 1 50%;
-            flex-wrap: wrap;
+            /* flex-wrap: wrap; */
             line-height: 2;
+            flex-direction: column;
         }
 }
 /* _________________меин________________________________________________________________________ */
