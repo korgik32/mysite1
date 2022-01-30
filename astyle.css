@@ -37,7 +37,7 @@ img{
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    
+    min-width: 0;    
 }
 
 ._container {
@@ -66,6 +66,7 @@ img{
         left:0;
         top:0;
         z-index: 50 ;
+        min-width: 0;    
     }
     .header_container {
         display:flex;
@@ -124,15 +125,13 @@ margin: 0px 17px 0px 0px;
 
 @media(max-width: 588px) {
     .header_menu {
-        margin: 0px 0px 0px 20%;
-        
+        margin: 0px 0px 0px 18%;
         
         }
         .menu_list {
             flex: 0 1 50%;
-            /* flex-wrap: wrap; */
+            flex-wrap: wrap;
             line-height: 2;
-            flex-direction: column;
         }
 }
 /* _________________меин________________________________________________________________________ */
@@ -141,6 +140,9 @@ margin: 0px 17px 0px 0px;
     }
 
     .main_top-block {
+        position: relative;
+     
+        min-width: 0;
         background: url(img/background_main/1.png) no-repeat;
         background-position: 75% center;
         background-size:cover;
@@ -161,15 +163,19 @@ margin: 0px 17px 0px 0px;
         padding: 0 15px;
         margin: 0px 0px 29px 0px;
     }
-    .main_top_band {
+    .main_top_band   {
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
         margin-right: 15px;
         margin-left: auto;
         margin-bottom: 29px;
+        min-width: 0;
     }
     ._band {
         width: 161px;
         height: 7px;
-        background-color: #ffffff;
+        background-color: #ffffff00;
         
     }
     .main_top_text {
@@ -207,6 +213,16 @@ margin: 0px 17px 0px 0px;
 
 }
 
+@media(max-width: 1000px) {
+    .main_top-block {
+        background: url(img/background_main/3.png) no-repeat;
+        background-position: 80%;
+        background-size:cover;
+        
+    }
+
+}
+
 @media(max-width: 590px) {
     .main_top_title {
         font-size: 45.5px;
@@ -219,6 +235,87 @@ margin: 0px 17px 0px 0px;
 
     }
 }
+
+/* СЛАЙДЕР _____________________________________________________________________________________________*/
+
+.my-slider {
+position: relative;
+width: inherit;
+height: inherit;
+
+}
+.swiper-container {
+}
+.my-slider__wrapper {
+    width: inherit;
+height: inherit;
+}
+.swiper-wrapper {
+}
+
+.swiper-slide {
+}
+
+.swiper-button-next {
+ 
+
+    
+}
+.swiper-button-prev {
+
+}
+.header {
+    position: absolute;
+    width: 100%;
+    left:0;
+    top:0;
+    z-index: 50 ;
+    min-width: 0;    
+}
+.header_container {
+    display:flex;
+    min-height: 132px;
+    align-items: center;
+    justify-content: space-between;
+}
+.swiper-pagination__container {
+    width: 100%;
+    
+    position: absolute;
+    min-width: 0;
+    
+}
+.swiper-pagination__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    box-sizing:border-box;
+    height: 30px;
+}
+
+.swiper-pagination{
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+}
+.swiper-pagination:last-child{
+    margin-right: 0;
+    padding-right: 0;
+}
+.swiper-pagination-bullet{
+    width: 161px;
+    height: 7px;
+    background-color: #ffffff;
+    
+    border-radius: 0;
+
+    
+}
+.swiper-pagination-bullet-active{
+    
+    
+}
+       
 
 /* ________ВТОРОЙ БЛОК_________________________________________________________________________ */
 
