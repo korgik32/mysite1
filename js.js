@@ -18,7 +18,6 @@ onload = () => {
     }
     function getCoords(elem) {
         var target_band = document.querySelector(`${elem}`).getBoundingClientRect();
-        console.log(target_band);
 
         var target_pagination_container = document.querySelector(`.swiper-pagination__container`);
 
@@ -45,8 +44,7 @@ onload = () => {
 
     }
 
-
-    getCoords('._band');
+    setInterval(getCoords, 100, '._band');
     cloneSlide();
     cloneSlide();
 
@@ -67,5 +65,9 @@ onload = () => {
     });
     /* document.getElementsByClassName('main_top-block')[0].style.background = `url("img/background_main/3.png") no - repeat; `; */
 
+    /* let qwer = document.querySelector(".swiper-container"); */
+    let qwer = document.getElementsByClassName('swiper-container')[0];
+    /* console.log(getComputedStyle(qwer)); */
 
-}
+
+}   
